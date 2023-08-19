@@ -48,7 +48,7 @@ const initMessagesPrompt: Array<ChatCompletionRequestMessage> = [
   },
   {
     role: ChatCompletionRequestMessageRoleEnum.Assistant,
-    content: `:bug:fix(server.ts): 修改端口变量名称从小写的 port 改为大写的 PORT
+    content: `:art:fix(server.ts): 修改端口变量名称从小写的 port 改为大写的 PORT
     :sparkles:feat(server.ts): 增加环境变量： process.env.PORT`,
   },
 ];
