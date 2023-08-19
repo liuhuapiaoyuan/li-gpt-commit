@@ -31,7 +31,7 @@ export class GenerateCompletionFlow
 
     if (!diff || diff.trim() === "") {
       throw new Error(
-        "No staged changes found. Make sure to stage your changes with `git add`."
+        "你应该先将修改本使用 `git add` 后，再尝试。"
       );
     }
 

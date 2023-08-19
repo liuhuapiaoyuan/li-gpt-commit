@@ -54,7 +54,7 @@
       ]
     },
     "configuration": {
-      "title": "GPT Commit",
+      "title": "GPT Commit@Li",
       "properties": {
         "gptcommit.appearance.delimeter": {
           "type": "string",
@@ -77,6 +77,11 @@
           ],
           "default": "Quick pick",
           "description": "Method used to approve generated commit messages"
+        },
+        "gptcommit.general.systemPrompt": {
+          "type": "string",
+          "default": "",
+          "description": "提示词模板"
         },
         "gptcommit.openAI.apiKey": {
           "type": "string",
