@@ -94,7 +94,7 @@ export async function generateAiCommitCommand() {
 
     if (!isValidApiKey()) {
       logToOutputChannel("OpenAI API Key is not set. Asking user to set it.");
-      await vscode.commands.executeCommand("gptcommit.setOpenAIApiKey");
+      await vscode.commands.executeCommand("gptcommit@li.setOpenAIApiKey");
     }
 
     if (!isValidApiKey()) {

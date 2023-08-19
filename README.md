@@ -1,6 +1,12 @@
+
+
+
 # GPT Commit
 
 VS Code extension which helps to generate AI commit messages using ChatGPT.
+## TODO 
+- [ ] 允许用户自定义提示词模板   systemPrompt
+
 
 ## Features
 
@@ -21,20 +27,20 @@ GPT Commit extension contributes the following settings:
 
 ### Appearance
 
-- `gptcommit.appearance.delimeter`: Delimeter between commit lines
+- `gptcommit@li.appearance.delimeter`: Delimeter between commit lines
 
 ### General
 
-- `gptcommit.general.generator`: Generator used to create commit messages. Available options: ChatGPT
-- `gptcommit.general.messageApproveMethod`: Method used to approve generated commit message. Available options: Quick pick, Message file
+- `gptcommit@li.general.generator`: Generator used to create commit messages. Available options: ChatGPT
+- `gptcommit@li.general.messageApproveMethod`: Method used to approve generated commit message. Available options: Quick pick, Message file
 
 ### OpenAI
 
-- `gptcommit.openAI.apiKey`: OpenAI API Key. Needed for generating AI commit messages
-- `gptcommit.openAI.gptVersion`: Version of GPT used by OpenAI
-- `gptcommit.openAI.customEndpoint`: Custom endpoint URL for OpenAI API
-- `gptcommit.openAI.temperature`: Controls randomness. Lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive
-- `gptcommit.openAI.maxTokens`: The maximum number of tokens to generate. Requests can use up to 2048 tokens shared between prompt and completion
+- `gptcommit@li.openAI.apiKey`: OpenAI API Key. Needed for generating AI commit messages
+- `gptcommit@li.openAI.gptVersion`: Version of GPT used by OpenAI
+- `gptcommit@li.openAI.customEndpoint`: Custom endpoint URL for OpenAI API
+- `gptcommit@li.openAI.temperature`: Controls randomness. Lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive
+- `gptcommit@li.openAI.maxTokens`: The maximum number of tokens to generate. Requests can use up to 2048 tokens shared between prompt and completion
 
 ## Release Notes
 

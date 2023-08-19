@@ -32,22 +32,22 @@
   "contributes": {
     "commands": [
       {
-        "command": "gptcommit.generateAICommit",
-        "title": "Generate AI commit",
+        "command": "gptcommit@li.generateAICommit",
+        "title": "GPT生成提交信息",
         "icon": {
           "dark": "assets/icons/commit-dark.svg",
           "light": "assets/icons/commit-light.svg"
         }
       },
       {
-        "command": "gptcommit.setOpenAIApiKey",
+        "command": "gptcommit@li.setOpenAIApiKey",
         "title": "Set OpenAI API key"
       }
     ],
     "menus": {
       "scm/title": [
         {
-          "command": "gptcommit.generateAICommit",
+          "command": "gptcommit@li.generateAICommit",
           "when": "scmProvider == git",
           "group": "navigation"
         }
@@ -56,12 +56,12 @@
     "configuration": {
       "title": "GPT Commit@Li",
       "properties": {
-        "gptcommit.appearance.delimeter": {
+        "gptcommit@li.appearance.delimeter": {
           "type": "string",
           "default": "*",
           "description": "Delimeter between commit lines"
         },
-        "gptcommit.general.generator": {
+        "gptcommit@li.general.generator": {
           "type": "string",
           "enum": [
             "ChatGPT"
@@ -69,7 +69,7 @@
           "default": "ChatGPT",
           "description": "Generator used to create commit messages"
         },
-        "gptcommit.general.messageApproveMethod": {
+        "gptcommit@li.general.messageApproveMethod": {
           "type": "string",
           "enum": [
             "Quick pick",
@@ -78,17 +78,17 @@
           "default": "Quick pick",
           "description": "Method used to approve generated commit messages"
         },
-        "gptcommit.general.systemPrompt": {
+        "gptcommit@li.general.systemPrompt": {
           "type": "string",
           "default": "",
           "description": "提示词模板"
         },
-        "gptcommit.openAI.apiKey": {
+        "gptcommit@li.openAI.apiKey": {
           "type": "string",
           "default": "",
           "description": "Needed for generating AI commit messages"
         },
-        "gptcommit.openAI.gptVersion": {
+        "gptcommit@li.openAI.gptVersion": {
           "type": "string",
           "enum": [
             "gpt-4",
@@ -103,17 +103,17 @@
           "default": "gpt-3.5-turbo-16k",
           "description": "Version of GPT used by OpenAI"
         },
-        "gptcommit.openAI.customEndpoint": {
+        "gptcommit@li.openAI.customEndpoint": {
           "type": "string",
           "default": "",
-          "description": "Custom endpoint URL for OpenAI API"
+          "description": "自定义接口访问默认："
         },
-        "gptcommit.openAI.temperature": {
+        "gptcommit@li.openAI.temperature": {
           "type": "number",
           "default": 0.2,
           "description": "Controls randomness. Lowering results in less random completions. As the temperature approaches zero, the model will become deterministic and repetitive"
         },
-        "gptcommit.openAI.maxTokens": {
+        "gptcommit@li.openAI.maxTokens": {
           "type": "number",
           "default": 196,
           "description": "The maximum number of tokens to generate. Requests can use up to 2048 tokens shared between prompt and completion"
@@ -140,7 +140,8 @@
     "esbuild": "^0.17.14",
     "eslint": "^8.36.0",
     "glob": "^8.1.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "vsce": "^2.15.0"
   },
   "dependencies": {
     "execa": "^7.1.1",
