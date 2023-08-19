@@ -1,6 +1,6 @@
 {
-  "name": "gpt-commit",
-  "displayName": "GPT Commit",
+  "name": "li-gpt-commit",
+  "displayName": "GPT Commit@Li",
   "description": "VS Code extension which helps to generate AI commit messages using ChatGPT",
   "version": "1.0.5",
   "homepage": "https://github.com/dmytrobaida/GPTCommitVSCode#readme",

@@ -116,7 +116,7 @@ export async function generateAiCommitCommand() {
             const quickPickResult = await vscode.window.showQuickPick(
               ["Yes", "No"],
               {
-                title: `Use this commit message?: ${message}`,
+                title: `确认提交内容: ${message}`,
               }
             );
 
@@ -144,7 +144,7 @@ export async function generateAiCommitCommand() {
       {
         location: vscode.ProgressLocation.Notification,
         cancellable: false,
-        title: "Generating AI Commit message",
+        title: "使用AI生成提交内容",
       },
       async (progress) => {
         let increment = 0;

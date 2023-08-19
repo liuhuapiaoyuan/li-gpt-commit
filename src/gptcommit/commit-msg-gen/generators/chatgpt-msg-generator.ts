@@ -19,7 +19,7 @@ import { MsgGenerator } from "./msg-generator";
 const initMessagesPrompt: Array<ChatCompletionRequestMessage> = [
   {
     role: ChatCompletionRequestMessageRoleEnum.System,
-    content: `You are to act as the author of a commit message in git. Your mission is to create clean and comprehensive commit messages in the conventional commit convention. I'll send you an output of 'git diff --staged' command, and you convert it into a commit message. Do not preface the commit with anything, use the present tense. Don't add any descriptions to the commit, only commit message. Use english language to answer.`,
+    content: `You are to act as the author of a commit message in git. Your mission is to create clean and comprehensive commit messages in the conventional commit convention. I'll send you an output of 'git diff --staged' command, and you convert it into a commit message. Do not preface the commit with anything, use the present tense. Don't add any descriptions to the commit, only commit message. Use Chinese language to answer.`,
   },
   {
     role: ChatCompletionRequestMessageRoleEnum.User,
@@ -48,8 +48,8 @@ const initMessagesPrompt: Array<ChatCompletionRequestMessage> = [
   },
   {
     role: ChatCompletionRequestMessageRoleEnum.Assistant,
-    content: `fix(server.ts): change port variable case from lowercase port to uppercase PORT
-        feat(server.ts): add support for process.env.PORT environment variable`,
+    content: `:bug:fix(server.ts): change port variable case from lowercase port to uppercase PORT
+    :sparkles:feat(server.ts): add support for process.env.PORT environment variable`,
   },
 ];
 
