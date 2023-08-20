@@ -3,11 +3,11 @@
   "displayName": "GPT Commit@Li",
   "description": "VS Code extension which helps to generate AI commit messages using ChatGPT(中文支持)",
   "version": "1.0.5",
-  "homepage": "https://github.com/dmytrobaida/GPTCommitVSCode#readme",
-  "bugs": "https://github.com/dmytrobaida/GPTCommitVSCode/issues",
+  "homepage": "https://liuhuapiaoyuan.coding.net/public/open-source/GPTCommitVSCode/git/#readme",
+  "bugs": "https://liuhuapiaoyuan.coding.net/public/open-source/GPTCommitVSCode/git/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dmytrobaida/GPTCommitVSCode"
+    "url": "https://liuhuapiaoyuan.coding.net/public/open-source/GPTCommitVSCode/git/"
   },
   "license": "MIT",
   "engines": {
