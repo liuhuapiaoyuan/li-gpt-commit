@@ -44,7 +44,7 @@ GPT Commit extension contributes the following settings:
 
 ## Release Notes
 
-### 1.0.1 
+### 1.0.6 
 - 支持中文
 - QuickPick 模式不再弹窗提示，直接进入
 - 默认模板增加Summay的处理，对本地修改简单总结
