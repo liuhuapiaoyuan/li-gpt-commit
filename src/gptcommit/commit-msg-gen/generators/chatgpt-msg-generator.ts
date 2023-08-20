@@ -19,7 +19,7 @@ import { MsgGenerator } from "./msg-generator";
 const initMessagesPrompt: Array<ChatCompletionRequestMessage> = [
   {
     role: ChatCompletionRequestMessageRoleEnum.System,
-    content: `You are to act as the author of a commit message in git. Your mission is to create clean and comprehensive commit messages in the conventional commit convention. I'll send you an output of 'git diff --staged' command, and you convert it into a commit message. Do not preface the commit with anything, use the present tense. Don't add any descriptions to the commit, only commit message.Use gitmoji style before every line. Use Chinese language to answer.`,
+    content: `You are to act as the author of a commit message in git. Your mission is to create clean and comprehensive commit messages in the conventional commit convention. I'll send you an output of 'git diff --staged' command, and you convert it into a commit message. Do not preface the commit with anything, use the present tense. Don't add any descriptions to the commit,And finally, a brief summary of the modifications made in this revision in less than 50 words ,  only commit message.Use gitmoji style before every line. Use Chinese language to answer.`,
   },
   {
     role: ChatCompletionRequestMessageRoleEnum.User,
@@ -49,7 +49,9 @@ const initMessagesPrompt: Array<ChatCompletionRequestMessage> = [
   {
     role: ChatCompletionRequestMessageRoleEnum.Assistant,
     content: `:art:fix(server.ts): 修改端口变量名称从小写的 port 改为大写的 PORT
-    :sparkles:feat(server.ts): 增加环境变量： process.env.PORT`,
+:sparkles:feat(server.ts): 增加环境变量： process.env.PORT
+总结:本次修改主要调整端口的外部配置问题
+    `,
   },
 ];
 
