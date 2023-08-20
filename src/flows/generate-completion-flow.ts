@@ -1,6 +1,7 @@
 import { MsgGenerator } from "@gptcommit/commit-msg-gen/generators/msg-generator";
 import { DiffProvider } from "@gptcommit/scm/diff-providers/diff-provider";
 import { CommitMessageWriter } from "@gptcommit/scm/commit-message-writers/commit-message-writer";
+import * as vscode from "vscode";
 
 import { Flow } from "./flow";
 
@@ -30,8 +31,12 @@ export class GenerateCompletionFlow
     const diff = await this.diffProvider.getStagedDiff();
 
     if (!diff || diff.trim() === "") {
+      const message = "你应该先将修改本使用 `git add` 后，再尝试。";
+      vscode.window.showQuickPick(["好的"],{
+        title:message
+      });
       throw new Error(
-        "你应该先将修改本使用 `git add` 后，再尝试。"
+        message
       );
     }
 
