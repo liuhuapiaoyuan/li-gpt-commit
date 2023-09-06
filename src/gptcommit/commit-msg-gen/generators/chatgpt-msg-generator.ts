@@ -16,6 +16,7 @@ import { getSystemTemplate, trimNewLines } from "@utils/text";
 import { Configuration as AppConfiguration } from "@utils/configuration";
 
 import { MsgGenerator } from "./msg-generator";
+import { getTemplate } from "../template";
 
 const _initMessagesPrompt: Array<ChatCompletionRequestMessage> = [
   {
@@ -60,7 +61,7 @@ function generateCommitMessageChatCompletionPrompt(
   diff: string
 ): Array<ChatCompletionRequestMessage> {
  // const chatContextAsCompletionRequest = [...initMessagesPrompt];
-  const template = getSystemTemplate()
+  const template = getTemplate()
   return [{ role: ChatCompletionRequestMessageRoleEnum.User,
     content: template.replace("{{DIFF}}", diff)
   }];

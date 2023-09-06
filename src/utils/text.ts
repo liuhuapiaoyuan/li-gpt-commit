@@ -23,6 +23,10 @@ export function isValidApiKey() {
   );
 }
 
+export function getTemplateType() {
+  const configuration = getConfiguration();
+  return configuration.general.promptType
+}
 
 export function getSystemTemplate() {
   const configuration = getConfiguration();

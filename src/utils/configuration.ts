@@ -13,6 +13,11 @@ const configurationSchema = z.object({
       .default("ChatGPT")
       .catch("ChatGPT")
       .optional(),
+      promptType: z
+      .enum(["自定义","模板1","模板2"])
+      .default("模板1")
+      .catch("模板1")
+      .optional(),
     systemPrompt: z.string().optional(),
     messageApproveMethod: z
       .enum(["Quick pick", "Message file"])
