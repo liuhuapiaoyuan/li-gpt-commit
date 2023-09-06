@@ -9,14 +9,15 @@ import {
   ChatCompletionRequestMessageRoleEnum,
   Configuration,
   OpenAIApi,
+  
 } from "openai";
 
-import { trimNewLines } from "@utils/text";
+import { getSystemTemplate, trimNewLines } from "@utils/text";
 import { Configuration as AppConfiguration } from "@utils/configuration";
 
 import { MsgGenerator } from "./msg-generator";
 
-const initMessagesPrompt: Array<ChatCompletionRequestMessage> = [
+const _initMessagesPrompt: Array<ChatCompletionRequestMessage> = [
   {
     role: ChatCompletionRequestMessageRoleEnum.System,
     content: `You are to act as the author of a commit message in git. Your mission is to create clean and comprehensive commit messages in the conventional commit convention. I'll send you an output of 'git diff --staged' command, and you convert it into a commit message. Do not preface the commit with anything, use the present tense. Don't add any descriptions to the commit,And finally, a brief summary of the modifications made in this revision in less than 50 words ,  only commit message.Use gitmoji style before every line. Use Chinese language to answer.`,
@@ -58,14 +59,11 @@ const initMessagesPrompt: Array<ChatCompletionRequestMessage> = [
 function generateCommitMessageChatCompletionPrompt(
   diff: string
 ): Array<ChatCompletionRequestMessage> {
-  const chatContextAsCompletionRequest = [...initMessagesPrompt];
-
-  chatContextAsCompletionRequest.push({
-    role: ChatCompletionRequestMessageRoleEnum.User,
-    content: diff,
-  });
-
-  return chatContextAsCompletionRequest;
+ // const chatContextAsCompletionRequest = [...initMessagesPrompt];
+  const template = getSystemTemplate()
+  return [{ role: ChatCompletionRequestMessageRoleEnum.User,
+    content: template.replace("{{DIFF}}", diff)
+  }];
 }
 
 const defaultModel = "gpt-3.5-turbo-16k";

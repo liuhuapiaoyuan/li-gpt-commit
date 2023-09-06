@@ -13,6 +13,7 @@ const configurationSchema = z.object({
       .default("ChatGPT")
       .catch("ChatGPT")
       .optional(),
+    systemPrompt: z.string().optional(),
     messageApproveMethod: z
       .enum(["Quick pick", "Message file"])
       .default("Quick pick")
