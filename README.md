@@ -43,6 +43,12 @@ GPT Commit extension contributes the following settings:
 - `gptcommit@li.openAI.maxTokens`: The maximum number of tokens to generate. Requests can use up to 2048 tokens shared between prompt and completion
 
 ## Release Notes
+### 1.0.8
+- 增加自定义提示词模板配置
+- 增加预设2个模板风格
+- 优化提示词，使得AI能够更加稳定的出现git commit
+
+### 1.0.7
 
 ### 1.0.6 
 - 支持中文
