@@ -137,8 +137,8 @@
     "build": "npm run esbuild-base -- --sourcemap",
     "watch": "npm run esbuild-base -- --sourcemap --watch",
     "lint": "eslint src --ext ts",
-    "package": "vsce package -o packages",
-    "package:publish": "vsce publish"
+    "package": "pnpm vsce package -o packages",
+    "package:publish": "pnpm vsce publish --no-yarn --no-dependencies"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
